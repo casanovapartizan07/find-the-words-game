@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Game by Partizan</title>
+		<link
+			rel="shortcut icon"
+			href="https://static.dzeninfra.ru/s3/zen-lib/favicons4/favicon-192%D1%85192.png"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<div id="container">
+			<h1>Find the words Game</h1>
+			<div id="content">
+				<div id="page1">
+					<input
+						id="countInput"
+						placeholder="Qancha so'z hohlaysiz?"
+						type="text"
+						onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+					/>
+					<button onclick="generateWords()">Generatsiya qilish</button>
+				</div>
+				<div id="page2" style="display: none">
+					<input type="text" id="searchInput" placeholder="Qidirish so'zini kiriting" />
+					<button onclick="searchWord()">Qidirish</button>
+					<div id="wordList" class="word-list"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="app.js"></script>
+</html>
